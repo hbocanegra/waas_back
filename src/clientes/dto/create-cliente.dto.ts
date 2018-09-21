@@ -7,4 +7,7 @@ export class CreateClienteDto {
 
     @ApiModelProperty()
     readonly nombre: string;
+
+    @ApiModelProperty()
+    readonly empresa: string;
 }

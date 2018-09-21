@@ -22,7 +22,7 @@ export class ClientesService {
     }
 
     async findById(@Param('id') id: string): Promise<Cliente> {
-        return await this.ClienteModel.findById(id);
+        return await this.ClienteModel.findById(id).populate('empresa').exec();
     }
 
     async delete(@Param('id') id: string) {
